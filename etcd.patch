@@ -1,0 +1,17 @@
+--- /var/lib/gems/1.8/gems/etcd-0.0.6/lib/etcd/client.rb  2014-02-27 14:20:17.000000000 +0000
++++ /var/lib/gems/1.9.1/gems/etcd-0.0.6/lib/etcd/client.rb  2014-02-26 17:52:49.000000000 +0000
+@@ -1,3 +1,4 @@
++require 'openssl'
+ require 'net/http'
+ require 'json'
+ require 'etcd/log'
+@@ -169,7 +170,7 @@
+       when :get
+         unless params.nil?
+           encoded_params = URI.encode_www_form(params)
+-          path+= "?" + encoded_params
++          path+= "?" + encoded_params unless encoded_params.nil?
+         end
+         req = Net::HTTP::Get.new(path)
+       when :post
+

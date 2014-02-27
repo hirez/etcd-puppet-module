@@ -1,0 +1,8 @@
+name 'future-etcd'
+version '1.0.0'
+source 'http://gitlab.futurenet.com/opsgroup/puppet3'
+author 'future'
+license 'Apache License, Version 2.0'
+summary '../modules/etcd'
+description 'Installs and configures etcd'
+project_page 'http://gitlab.futurenet.com/opsgroup/puppet3'
