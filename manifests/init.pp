@@ -10,15 +10,14 @@
 #
 # === Authors
 #
-# Future IT Operations <list.itoperation@futurenet.com>
+# John Hawkes-Reed <john.hawkes-reed@futurenet.com>
 #
 class etcd {
-
-  motd::register { 'etcd' : }
 
   anchor{ 'etcd::start': } ->
   class { 'etcd::package': } ~>
   class { 'etcd::config': } ~>
   class { 'etcd::service': } ~>
   anchor{ 'etcd::end': }
+
 }
