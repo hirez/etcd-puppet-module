@@ -37,6 +37,24 @@ etcd_wait, er, waits for a key to either burst into existance or change. As yet 
 
 Errors and omissions expected.
 
+
+What is this I don't even.
+==========================
+
+Sometimes it turns out to be quite handy to be able to bring up a collection of puppet-managed machines 
+in a hurry and all at once without prior knowledge of machine-name or IP address. For instance in a Jenkins-driven 
+test environment. In that case, you need some method for the various machines to signal their purpose and identity 
+so other machines can connect to them. For instance a Redis master/slave pair. You also need to be able to make the 
+slave box wait around for the master to announce its presence so it can connect to same.
+
+You could achieve this with a lot of cut, paste and swear of your hiera configs.
+
+Or you could muck around with a shared config-management DB.
+
+I chose option two because it was more interesting.
+
+
+
 Boilerplate
 ===========
 
