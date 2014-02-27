@@ -36,28 +36,3 @@ etcd_wait, er, waits for a key to either burst into existance or change. As yet 
 'etcd-server' is an IP address.
 
 Errors and omissions expected.
-
-Boilerplate
-===========
-
-
-
-To see all available rake tasks:
-
-  rake -T
-
-To validate your puppet manifests:
-
-  rake validate
-
-To lint your puppet manifests:
-
-  rake lint
-
-To package your puppet module, to upload somewhere (e.g. Forge):
-
-  rake package
-
-To generate module documentation:
-
-  rake doc
